@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun NavControllerApp() {
+fun NavControllerApp() { 
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "CryptoListScreen") {
         composable(route = "CryptoListScreen") {
