@@ -1,4 +1,4 @@
-package com.sedat.cryptoapp.view
+package com.sedat.cryptoapp.view.cryptodetail
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
