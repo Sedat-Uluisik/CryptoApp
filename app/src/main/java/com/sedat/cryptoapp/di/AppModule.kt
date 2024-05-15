@@ -24,7 +24,7 @@ object AppModule {
             .create(ApiService::class.java)
     }
 
-    /*@Provides
+    @Provides
     @Singleton
-    fun provideRepository(apiService: ApiService) = CryptoRepo(apiService)*/
+    fun provideRepository(apiService: ApiService) = CryptoRepo(apiService)
 }
