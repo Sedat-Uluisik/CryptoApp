@@ -53,7 +53,7 @@ class ViewModelCryptoList @Inject constructor(
         }
     }
 
-    private fun getCryptoList() = viewModelScope.launch{
+    fun getCryptoList() = viewModelScope.launch{
         isLoading.value = true
         val result = repository.getCryptoList()
 
