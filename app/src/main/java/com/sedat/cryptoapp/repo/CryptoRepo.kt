@@ -21,7 +21,7 @@ class CryptoRepo @Inject constructor(
         return Resource.Success(response)
     }
 
-    suspend fun getCryptoDetail(): Resource<CryptoDetailItem>{
+    suspend fun getCryptoDetail(): Resource<List<CryptoDetailItem>>{
         val response = try {
             apiService.getCryptoDetail()
         }catch (e: Exception){

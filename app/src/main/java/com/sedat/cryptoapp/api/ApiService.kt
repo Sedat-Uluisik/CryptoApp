@@ -9,5 +9,5 @@ interface ApiService {
     suspend fun getCryptoList(): List<CryptoItem>
 
     @GET("IA32-CryptoComposeData/main/crypto.json")
-    suspend fun getCryptoDetail(): CryptoDetailItem
+    suspend fun getCryptoDetail(): List<CryptoDetailItem>
 }
