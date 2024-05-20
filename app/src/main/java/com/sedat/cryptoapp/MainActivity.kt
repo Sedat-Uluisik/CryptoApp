@@ -11,6 +11,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.sedat.cryptoapp.ui.theme.CryptoAppTheme
+import com.sedat.cryptoapp.view.anim.navigateWithAnimation
 import com.sedat.cryptoapp.view.cryptodetail.CryptoDetailScreen
 import com.sedat.cryptoapp.view.cryptolist.CryptoListScreen
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,11 +32,11 @@ class MainActivity : ComponentActivity() {
 fun NavControllerApp() { 
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "CryptoListScreen") {
-        composable(route = "CryptoListScreen") {
+        navigateWithAnimation(route = "CryptoListScreen") {
             CryptoListScreen(navController = navController)
         }
 
-        composable(
+        navigateWithAnimation(
             route = "CryptoDetailScreen/{id}/{price}",
             arguments = listOf(navArgument("id") {
                 type = NavType.StringType
